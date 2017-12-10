@@ -1,0 +1,16 @@
+<!-- Home page(First Page) need to display two buttons(One is Show Employee Component Button and another one is Show Non-Employee Component  Button)
+If Show Employee Component button is clicked,Employee Component will be loaded below the button
+Similarly If Show Non-Employee Component button is clicked ,Non-Employee component will be loaded below the screen. -->
+<h1> Welcome to Angular World!! </h1>
+<button type="button" class="btn btn-primary" (click)="IsNonEmployeeComClicked = false;IsEmployeeComClicked = true">
+Show Employee Component</button>
+<button type="button" class="btn btn-primary" (click)="IsEmployeeComClicked = false;IsNonEmployeeComClicked = true">
+Show Non-Employee Component</button>
+
+<div *ngIf="IsEmployeeComClicked">
+    <app-employee></app-employee>
+</div>
+
+<div *ngIf="IsNonEmployeeComClicked">
+    <app-non-employee></app-non-employee>
+</div>
